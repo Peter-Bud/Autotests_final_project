@@ -11,3 +11,7 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     ADD_TO_BASKET = (By.ID, 'add_to_basket_form')
+    BOOK_NAME = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/h1')
+    BOOK_PRICE = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/p[1]')
+    BASKET_BOOK_PRICE = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
+    BASKET_BOOK_NAME = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
