@@ -1,8 +1,12 @@
 from selenium.webdriver.common.by import By
+
+
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_LINK = (By.PARTIAL_LINK_TEXT, 'basket')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
@@ -13,13 +17,20 @@ class LoginPageLocators():
 
     REGISTER_FORM = (By.CSS_SELECTOR, '.register_form')
 
+    REGISTER_EMAIL = (By.CSS_SELECTOR, '#id_registration-email')
+    REGISTER_PASSWORD = (By.CSS_SELECTOR, '#id_registration-password1')
+    REGISTER_PASSWORD_CONFIRM = (By.CSS_SELECTOR, '#id_registration-password2')
+    REGISTER_CONFIRM_BUTTON = (By.NAME, 'registration_submit')
+
+
 class ProductPageLocators():
     ADD_TO_BASKET = (By.ID, 'add_to_basket_form')
     BOOK_NAME = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/h1')
     BOOK_PRICE = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/p[1]')
     BASKET_BOOK_PRICE = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
     BASKET_BOOK_NAME = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
-    BOOK_SUCCSEFULLY_ADDED =(By.XPATH, '//*[@id="messages"]/div[1]/div')
+    BOOK_SUCCSEFULLY_ADDED = (By.XPATH, '//*[@id="messages"]/div[1]/div')
+
 
 class BasketPageLocators():
     BASKET_ITEMS = (By.CSS_SELECTOR, '.basket-items')
