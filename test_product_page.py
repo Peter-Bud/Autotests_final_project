@@ -22,7 +22,6 @@ class TestUserAddToBasketFromProductPage():
         page = BasketPage(browser, link)
         page.open()
         page.go_to_basket_page()
-        time.sleep(1)
         page.basket_should_be_emty()
         page.basket_is_empty_text_is_displayed()
 
